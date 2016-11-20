@@ -15,6 +15,7 @@ class UserProfilesController < ApplicationController
   # GET /user_profiles/new
   def new
     @user_profile = UserProfile.new
+    
   end
 
   # GET /user_profiles/1/edit
@@ -25,6 +26,7 @@ class UserProfilesController < ApplicationController
   # POST /user_profiles.json
   def create
     @user_profile = UserProfile.new(user_profile_params)
+    @user_profile.user_id = current_user.id
 
     respond_to do |format|
       if @user_profile.save
