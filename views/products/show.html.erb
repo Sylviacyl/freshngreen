@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @product.user %>
+  <strong>User email:</strong>
+  <%= @product.user.email %>
 </p>
 
 <p>
@@ -37,7 +37,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category %>
+  <%= render @product.category %>
 </p>
 
 <p>
