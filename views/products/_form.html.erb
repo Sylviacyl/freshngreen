@@ -8,7 +8,7 @@
     <%= f.input :price %>
     <%= f.input :quantity_available %>
     <%= f.input :size %>
-    <%= f.input :hero_picture_url %>
+    <%= f.input :hero_picture_url, as: :file %>
     <%= f.association :category %>
     <%= f.association :region %>
   </div>
