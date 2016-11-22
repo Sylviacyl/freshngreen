@@ -1,0 +1,2 @@
+json.extract! transaction_product_relationship, :id, :transaction, :product, :item_count, :created_at, :updated_at
+json.url transaction_product_relationship_url(transaction_product_relationship, format: :json)

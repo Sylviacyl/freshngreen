@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transaction:</strong>
+  <%= @transaction_product_relationship.transaction %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @transaction_product_relationship.product %>
+</p>
+
+<p>
+  <strong>Item count:</strong>
+  <%= @transaction_product_relationship.item_count %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_product_relationship_path(@transaction_product_relationship) %> |
+<%= link_to 'Back', transaction_product_relationships_path %>

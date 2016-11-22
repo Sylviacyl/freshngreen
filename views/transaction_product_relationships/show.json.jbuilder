@@ -1,0 +1,1 @@
+json.partial! "transaction_product_relationships/transaction_product_relationship", transaction_product_relationship: @transaction_product_relationship

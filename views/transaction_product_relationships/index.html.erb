@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Transaction Product Relationships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transaction</th>
+      <th>Product</th>
+      <th>Item count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transaction_product_relationships.each do |transaction_product_relationship| %>
+      <tr>
+        <td><%= transaction_product_relationship.transaction %></td>
+        <td><%= transaction_product_relationship.product %></td>
+        <td><%= transaction_product_relationship.item_count %></td>
+        <td><%= link_to 'Show', transaction_product_relationship %></td>
+        <td><%= link_to 'Edit', edit_transaction_product_relationship_path(transaction_product_relationship) %></td>
+        <td><%= link_to 'Destroy', transaction_product_relationship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transaction product relationship', new_transaction_product_relationship_path %>

@@ -1,0 +1,1 @@
+json.array! @transaction_product_relationships, partial: 'transaction_product_relationships/transaction_product_relationship', as: :transaction_product_relationship

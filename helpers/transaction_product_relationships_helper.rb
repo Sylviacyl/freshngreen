@@ -1,0 +1,2 @@
+module TransactionProductRelationshipsHelper
+end
