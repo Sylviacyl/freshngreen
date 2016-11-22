@@ -25,6 +25,7 @@
         <td><%= user_profile.phone %></td>
         <td><%= user_profile.address %></td>
         <td><%= user_profile.user_pic_url %></td>
+          <td><%= image_tag user_profile.user_pic_url_url %></td>
         <td><%= user_profile.company_name %></td>
         <td><%= link_to 'Show', user_profile %></td>
         <td><%= link_to 'Edit', edit_user_profile_path(user_profile) %></td>
