@@ -1,4 +1,6 @@
 class UserProfile < ActiveRecord::Base
   belongs_to :user
-  has_one :transaction
+
+  mount_uploader :user_pic_url, ImageUploader
+
 end
