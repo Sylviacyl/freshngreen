@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy, :buy]
+  before_action :authenticate_user!, except: [:index, :show, :buy]
+
 
   # GET /products
   # GET /products.json
