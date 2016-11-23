@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   has_many :products
   has_one :user_profile
   has_many :transactions
+  has_many :orders
 end
