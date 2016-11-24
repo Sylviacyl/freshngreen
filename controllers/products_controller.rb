@@ -7,12 +7,15 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @order = Order.new
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
   end
+  
+
   def buy
     puts "product purchase #{params[:id]}"
     redirect_to :back 

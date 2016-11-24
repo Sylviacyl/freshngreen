@@ -33,8 +33,15 @@
                 <td><%#= product.region %></td>
         <td><%= link_to 'Show', product %></td>
             
-        <td><%= link_to 'Buy', new_order_path(product:product.id) %></td>
-        
+        <td><%# link_to 'Buy', new_order_path(product:product.id) %></td>
+        <td>
+          <!-- form for purchase -->
+          <%= simple_form_for(@order) do |f| %>
+            <%= f.input :product_id, input_html: {value: product.id}, as: :hidden %>
+            <%= f.input :item_count,  input_html: {value: 1} %>
+            <%= f.submit 'Add to Order', class: 'btn btn-xs btn-success' %>
+          <% end %>
+        </td>
         <% if product.user == current_user %>
           <td><%= link_to 'Edit', edit_product_path(product) %></td>
           <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

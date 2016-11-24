@@ -25,18 +25,24 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    puts '#' * 40
+    puts params.inspect
+    product = Product.find(params[:order][:product_id])
     @order = Order.new(order_params)
     @order.user_id = current_user.id
-    
-    respond_to do |format|
+    @order.price = product.price
+     puts @order.inspect
+  #  respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+       redirect_to :back
+       
+        # format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        # format.json { render :show, status: :created, location: @order }
+      # else
+      #   format.html { render :new }
+      #   format.json { render json: @order.errors, status: :unprocessable_entity }
       end
-    end
+   # end
   end
 
   # PATCH/PUT /orders/1
