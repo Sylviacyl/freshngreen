@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  name: MyString
+  description: MyText
+  price: 1
+  quantity_available: 1
+  size: 1
+  hero_picture_url: MyString
+  category_id: 
+  region_id: 
+
+two:
+  user_id: 
+  name: MyString
+  description: MyText
+  price: 1
+  quantity_available: 1
+  size: 1
+  hero_picture_url: MyString
+  category_id: 
+  region_id: 

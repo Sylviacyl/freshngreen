@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  product: 
+  payment_details: MyString
+  delivery_address: MyString
+  stripe: MyString
+
+two:
+  user: 
+  product: 
+  payment_details: MyString
+  delivery_address: MyString
+  stripe: MyString
